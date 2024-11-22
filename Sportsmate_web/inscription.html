@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+    <link rel="icon" type="image/svg" href="Ressources/Sportsmate_v1.svg">
+    <link rel="stylesheet" href="styles_css/style.css">
+    <link rel="stylesheet" href="styles_css/style_inscription.css">
+
+    <!--import de la police via la librairie google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+</head>
+
+
+
+
+
+
+<body>
+    <form action="inscription_sql.php" method="post">
+
+        <div class = "centrage_groupe_element">
+
+            <div class = "container">
+                <img src="Ressources/Sportsmate_v1.svg" alt="Logo">
+                <h1> Sportsmate </h1>
+            </div>
+
+            <div class = "center_text_container">
+                <h3>Veuillez entrer un identifiant et un mot de passe</h3>
+            </div>
+    
+            <div class = "container">
+                <input type="text" id="username" name="username" placeholder="Identifiant">
+            </div>
+            
+            <div class = "container">
+                <input type="password" id="mdp" name="mdp" placeholder="Mot de passe">
+            </div>
+    
+            <div class = "container">
+                <input type="password" id="mdp2" name="mdp2" placeholder="Confirmer mot de passe">
+            </div>
+    
+            <div class = "center_text_container">
+                <a href="test.html"><button id = "inscription" class = "custom_button">S'inscrire</button></a>
+            </div>
+    
+            
+           
+        </div>
+
+    </form>
+    <script src = "confirm_mdp.js"></script> <!--lien avec le js qui vérifie que le mot de passe a bien la même tête dans les deux textfields-->
+   
+
+
+
+
+    
+</body>
+</html>

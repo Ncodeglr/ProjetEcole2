@@ -1,0 +1,471 @@
+.panneau_top{
+    margin-top: 0;
+    background-color: white;
+    width: 100%; 
+    height: 50px;
+    display: flex;
+    position: fixed; /*permet que le panneau reste toujours au-dessus du contenu de la page même quand on scroll*/
+    top:-1px;
+    border: 1px solid lightgray;
+}
+@media screen and (max-width: 500px) {
+    .panneau_top{
+      
+        background-color: white;
+        width: 100%; 
+        height: 50px;
+        /*permet que le panneau reste toujours au-dessus du contenu de la page même quand on scroll*/
+        position:absolute;
+        border: 1px solid lightgray;
+    } 
+    .panneau_parametres{
+        background-color: white;
+        width: 100%; 
+        height: 500px;
+    }
+}
+.panneau_bottom{
+    display: none;
+} 
+@media screen and (max-width: 500px) {
+    .panneau_bottom{
+        display: block;
+        background-color: white;
+        width: 100%; 
+        height: 50px;
+        left: -2px;
+        /*permet que le panneau reste toujours au-dessus du contenu de la page même quand on scroll*/
+        bottom: 0px;
+        position:fixed;
+        border: 1px solid lightgray;
+    } 
+}
+body, html { /*pour enlever le padding auto horizonatl*/
+    margin: 0;
+    padding: 0;
+    background-color: rgb(233, 231, 231);
+    margin-top:30px;
+    /*overflow-x: hidden; pourempêcher d'aller à gauche*/
+}
+@media screen and (max-width: 500px){
+    body, html { /*pour enlever le padding auto horizonatl*/
+        margin: 0;
+        padding: 0;
+        background-color: rgb(233, 231, 231);
+        margin-top:30px;
+        scrollbar-width: none; /*pour masquer la scrollbar*/
+        
+    }
+}
+
+.lien_custom {
+    text-decoration: none; /* Supprime les soulignements */
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+
+
+.image_svg {/*pour le logo principalement*/
+    position: static; 
+    width: 35px; /* Largeur de l'image */
+    height: auto; 
+    margin-top: 7px;
+    margin-left: 10px;
+}
+
+
+.overlay{ /*overlay de l'input de recherche sur le panneau_top*/
+    position: absolute;
+    margin-left: 60px;
+}
+
+input[type="recherche"] {
+    width: 250px; /* Largeur du champ de texte */
+    padding: 10px; /* Espacement interne */
+    font-size: 16px; /* Taille de la police */
+    border: 2px solid #f6f6f6; /* Bordure */
+    border-radius: 10px; /* Coins arrondis */
+    outline: none; /* Supprimer la bordure de focus */
+    background-color: #f6f6f6;
+    margin-top: 3px;
+    background-image: url('Ressources/glass_search.svg');
+    background-repeat: no-repeat;
+    background-position: 10px center; 
+    background-size: 20px;
+    text-indent: 25px; 
+}
+@media screen and (max-width: 500px) {
+    input[type="recherche"] {
+        width: 80%; 
+        padding: 10px; 
+        font-size: 16px; 
+        border: 2px solid #f6f6f6;
+        border-radius: 10px; 
+        outline: none; 
+        background-color: #f6f6f6;
+        margin-top: 3px;
+        background-image: url('Ressources/glass_search.svg');
+        background-repeat: no-repeat;
+        background-position: 10px center; 
+        background-size: 20px;
+        text-indent: 25px; 
+    }
+}
+
+.icone_home {/*pour les icones utilisateurs*/
+    position: absolute; 
+    width: 50px; /* Largeur de l'image */
+    height: auto; 
+    margin-left: 400px;
+}
+@media screen and (max-width: 500px){
+    .icone_home {
+        position: absolute; 
+        width: 45px; 
+        margin-top: 2px;
+        height: auto; 
+        margin-left: 200px;
+        display: none;/*faire disparaitre les icones hautes dans la version mobile*/
+    } 
+    .icone_home_mobile{
+        position: absolute; 
+        width: 50px; 
+        height: auto; 
+        left: 15%;
+    }
+}
+
+.icone_profil {/*pour les icones utilisateurs*/
+    position: absolute;
+    width: 35px; /* Largeur de l'image */
+    height: auto;
+    margin-top: 6px;
+    margin-left: 500px;
+}
+@media screen and (max-width: 500px){
+    .icone_profil {/*pour les icones utilisateurs*/
+        position: absolute;
+        width: 30px; /* Largeur de l'image */
+        height: auto;
+        margin-top: 9px;
+        margin-left: 260px;
+        display: none;/*faire disparaitre les icones hautes dans la version mobile*/
+    }
+    .icone_profil_mobile{
+        position: absolute;
+        width: 35px; /* Largeur de l'image */
+        height: auto;
+        left: 35%;
+        top: 17%;
+    }
+}
+.icone_message {/*pour les icones utilisateurs*/
+    position: absolute;
+    width: 30px; /* Largeur de l'image */
+    height: auto;
+    margin-top: 8px;
+    margin-left: 600px;
+}
+@media screen and (max-width: 500px){
+    .icone_message {/*pour les icones utilisateurs*/
+        position: absolute;
+        width: 25px; /* Largeur de l'image */
+        height: auto;
+        margin-top: 12px;
+        margin-left: 315px;
+        display: none;/*faire disparaitre les icones hautes dans la version mobile*/
+    }
+    .icone_message_mobile{
+        position: absolute;
+        width: 30px; /* Largeur de l'image */
+        height: auto;
+        left: 55%;
+        top: 19%;
+    }
+}
+.icone_add {/*pour les icones utilisateurs*/
+    position: absolute;
+    width: 20px; /* Largeur de l'image */
+    height: auto;
+    margin-top: 12px;
+    margin-left: 693px;
+    cursor: pointer;
+}
+@media screen and (max-width: 500px){
+    .icone_add {/*pour les icones utilisateurs*/
+        position: absolute;
+        width: 15px; /* Largeur de l'image */
+        height: auto;
+        margin-top: 16px;
+        margin-left: 360px;
+        cursor: pointer;
+        display: none;/*faire disparaitre les icones hautes dans la version mobile*/
+    }
+    .icone_add_mobile{
+        position: absolute;
+        width: 20px; /* Largeur de l'image */
+        height: auto;
+        left: 75%;
+        cursor: pointer;
+        top: 19%;
+    }
+}
+
+
+
+#userDataContainer {
+    margin-top: 20px;
+    display: block;
+    border-radius: 10px;
+    margin-right: 10px;
+    width: 50%; /* Largeur du conteneur */
+    margin-left: 2.5%;
+}
+
+
+.user {
+    display: block; /* Affiche les profils sur une ligne horizontale */
+    margin-right: 20px;
+    border-radius: 10px;
+    background-color: white;
+    height: 250px;
+    margin-top: 10px;
+}
+.Titresport{
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    margin-left: 150px;
+    
+}
+.sport1{
+    font-size: 16px;
+    display: block;
+    margin-left: 150px;
+    
+}
+.sport2{
+    font-size: 16px;
+    display: block;
+    margin-left: 150px;
+    margin-top: -18px;
+}
+.sport3{
+    font-size: 16px;
+    display: block;
+    margin-left: 150px;
+    margin-top: -18px;
+}
+
+.identite{
+    display: block;
+    margin-left: 30px;
+}
+
+.pdp{
+    display: block;
+    margin-left: 10px;
+    
+}
+.bio{
+    display: block;
+    margin-left: 150px;
+    width: 500px;
+}
+.Titrebio{
+    margin-top: -210px;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    margin-left: 150px;
+    width: 500px;
+}
+
+
+.custom_link_without_hover {/*classe pour le texte des profils qui sont display par la recherche */
+    color: black; /* Couleur du texte du lien */
+    text-decoration: none; /* Supprime les soulignements */
+    font-size: 16px;
+}
+
+.navigationButton1{
+    margin-bottom: 100px;
+    margin-left: 17%;
+    margin-top: 10px;
+    background-image: url('Ressources/arrow_left_gray.svg'); 
+    background-size: cover; /* Pour couvrir toute la zone du bouton avec l'image */
+    background-color: transparent;
+    border: none; /* Supprime les bordures */
+    cursor: pointer; /* Définir le curseur comme pointeur au survol */
+    width: 20px; /* Largeur de votre image */
+    height: 30px;
+    
+}
+.navigationButton2{
+    margin-bottom: 100px;
+    margin-left: 15%;
+    background-image: url('Ressources/arrow_right_gray.svg'); 
+    background-size: cover; /* Pour couvrir toute la zone du bouton avec l'image */
+    background-color: transparent;
+    border: none; /* Supprime les bordures */
+    cursor: pointer; /* Définir le curseur comme pointeur au survol */
+    width: 20px; /* Largeur de votre image */
+    height: 30px;
+}
+
+.display_nom_icone_dessous{ /*container pour avoir les noms d'icone en dessous*/
+    display: block;
+    position: absolute;
+}
+
+h1{/*texte sous icone accueil*/
+    position: absolute;
+    font-size: 10px;
+    color: gray;
+    font-weight: lighter;
+    margin-left: 408px;
+    margin-top: 35px;
+}
+@media screen and (max-width: 500px){
+    h1{/*texte sous icone accueil*/
+        position: absolute;
+        font-size: 9px;
+        color: gray;
+        font-weight: lighter;
+        margin-left: 208px;
+        margin-top: 35px;
+        display: none;/*faire disparaitre les icones hautes dans la version mobile*/
+    }
+}
+.h1bis{/*texte sous icone accueil*/
+    position: absolute;
+    font-size: 10px;
+    color: black;
+    margin-left: 408px;
+    margin-top: 35px;
+}
+@media screen and (max-width: 500px){
+    .h1bis{/*texte sous icone accueil*/
+        position: absolute;
+        font-size: 9px;
+        color: black;
+        margin-left: 208px;
+        margin-top: 35px;
+        display: none;/*faire disparaitre les icones hautes dans la version mobile*/
+    }
+}
+
+h2{/*texte sous icone profil*/
+    position: absolute;
+    font-size: 10px;
+    color: gray;
+    font-weight: lighter;
+    margin-left: 505px;
+    margin-top: 35px;
+}
+@media screen and (max-width: 500px){
+    h2{/*texte sous icone profil*/
+        position: absolute;
+        font-size: 9px;
+        color: gray;
+        font-weight: lighter;
+        margin-left: 265px;
+        margin-top: 35px;
+        display: none;/*faire disparaitre les icones hautes dans la version mobile*/
+    }
+}
+.h2bis{/*texte sous icone profil*/
+    position: absolute;
+    font-size: 10px;
+    color: black;
+    margin-left: 505px;
+    margin-top: 35px;
+}
+@media screen and (max-width: 500px){
+    .h2bis{/*texte sous icone profil*/
+        position: absolute;
+        font-size: 9px;
+        color: black;
+        margin-left: 265px;
+        margin-top: 35px;
+        display: none;/*faire disparaitre les icones hautes dans la version mobile*/
+    }
+}
+h3{/*texte sous icone messages*/
+    position: absolute;
+    font-size: 10px;
+    color: gray;
+    font-weight: lighter;
+    margin-left: 600px;
+    margin-top: 35px;
+}
+@media screen and (max-width: 500px){
+    h3{/*texte sous icone messages*/
+        position: absolute;
+        font-size: 9px;
+        color: gray;
+        font-weight: lighter;
+        margin-left: 310px;
+        margin-top: 35px;
+        display: none;/*faire disparaitre les icones hautes dans la version mobile*/
+    }
+}
+.h3bis{/*texte sous icone messages*/
+    position: absolute;
+    font-size: 10px;
+    color: black;
+    margin-left: 600px;
+    margin-top: 35px;
+}
+@media screen and (max-width: 500px){
+    .h3bis{/*texte sous icone messages*/
+        position: absolute;
+        font-size: 9px;
+        color: black;
+        margin-left: 310px;
+        margin-top: 35px;
+        display: none;/*faire disparaitre les icones hautes dans la version mobile*/
+    }
+}
+h4{/*texte sous icone add*/
+    position: absolute;
+    font-size: 10px;
+    color: gray;
+    font-weight: lighter;
+    margin-left: 695px;
+    margin-top: 35px;
+    cursor: pointer;
+}
+@media screen and (max-width: 500px){
+    h4{/*texte sous icone add*/
+        position: absolute;
+        font-size: 9px;
+        color: gray;
+        font-weight: lighter;
+        margin-left: 360px;
+        margin-top: 35px;
+        cursor: pointer;
+        display: none;/*faire disparaitre les icones hautes dans la version mobile*/
+    }
+}
+
+.custom_button_deconnexion {
+    background-color: transparent; /* Couleur de fond */
+    color: red; /* Couleur du texte */
+    border: none; /* Supprime la bordure */
+    font-size: 16px; /* Taille de la police */
+    cursor: pointer; /* Curseur de souris en forme de main */
+    text-decoration: none; /* Supprime les soulignements */
+    margin-left: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 20px;
+}
+
+.icone_add_pop_up {/*pour les icones utilisateurs*/
+    width: 15px; /* Largeur de l'image */
+    height: auto;
+    cursor: pointer;
+    margin-right: 10px;
+}

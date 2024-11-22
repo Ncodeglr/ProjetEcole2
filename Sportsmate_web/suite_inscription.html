@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+    <link rel="icon" type="image/svg" href="Ressources/Sportsmate_v1.svg">
+    <link rel="stylesheet" href="styles_css/style.css">
+    <link rel="stylesheet" href="styles_css/style_inscription.css">
+
+    <!--import de la police via la librairie google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+</head>
+<body>
+    <form action="suite_inscription_sql.php" method="post" enctype="multipart/form-data">
+        <div class = "centrage_groupe_element">
+            <div class = "center_text_container">
+                <h3>Veuillez compléter ces informations complémentaires</h3>
+            </div>
+
+            <div class = "container">
+                <input type="text" id="prenom" name="prenom" placeholder="Prénom">
+            </div>
+
+            <div class = "container">
+                <input type="text" id="age" name="age" placeholder="Âge">
+            </div>
+
+            <div class = "container">
+                <input type="text" id="genre" name="genre" placeholder="Genre">
+            </div>
+
+            <!--Input d'un sport avec proposition-->
+            <div class="autocomplete_container">
+                <input type="text" id="sport_input1" name= "sport_input1" placeholder="Entrer un premier sport">
+                <div id="autocomplete_items"></div>
+            </div>
+
+            <div class="autocomplete_container">
+                <input type="text" id="sport_input2" name= "sport_input2" placeholder="Entrer un deuxième sport">
+                <div id="autocomplete_items"></div>
+            </div>
+            
+            <div class="autocomplete_container">
+                <input type="text" id="sport_input3" name= "sport_input3" placeholder="Entrer un troisème sport">
+                <div id="autocomplete_items"></div>
+            </div>
+            
+
+            <div class = "container">
+                <input type="text" id="bio" name="bio" placeholder="Bio">
+            </div>
+
+            <div class="container">
+                <h3>Choisir une photo de profil :</h3>
+            </div>
+
+            <div class="container">
+                <input type="file" id="file-input" name="photo" accept="image/*">
+                <div id="custom-file-upload">Choisir une photo</div>
+            </div>
+
+            <div class="container">
+                <div id="file-name"></div>
+            </div>
+
+            <div class = "center_text_container">
+                <button type = "submit" id = "inscription" class = "custom_button2">Continuer</button>
+            </div>
+            
+        </div>
+        
+        <input type="hidden" id="file-name-hidden" name="file_name">
+        
+        
+    </form>
+    <script src = "custom_upload_file.js"></script>
+    <script src="autoComplete.js"></script> <!--js pour l'autocomplete du sport choisi-->
+   
+    
+
+</body>
+</html>

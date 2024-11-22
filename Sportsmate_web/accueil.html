@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sportsmate</title>
+    <meta name = "description" content = "Rencontrez des gens pour faire du sport">
+    <link rel="icon" type="image/svg" href="Ressources/Sportsmate_v1.svg">
+    <link rel="stylesheet" href="styles_css/style.css"> <!-- lien avec le fichier css-->
+
+    <!--import de la police via la librairie google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    
+</head>
+
+
+<body>
+    <form id = "connexionForm" action="authentif_sql.php" method="post">
+
+        <div class = "box3">
+            <!--<p>trucs</p>-->
+        </div>
+        
+        <div class = "centrage_groupe_element">
+            <div class = "container">
+                <img src="Ressources/Sportsmate_v1.svg" alt="Logo">
+                <h1> Sportsmate </h1>
+            </div>
+        
+            <div class = "container">
+                <input type="text" id="nom" name="nom" placeholder="Identifiant">
+            </div>
+            
+            <div class = "container">
+                <input type="password" id="mdp" name="mdp" placeholder="Mot de passe">
+            </div>
+        
+            <div class = "center_text_container">
+                <button id = "connexionButton" class = "custom_button">Connexion</button> <!-- bouton connexion-->
+            </div>
+        
+            <div class = "center_text_container">
+                <h4>Pas encore inscrit ?&nbsp;</h4><a href="inscription.html" class = "custom_link">S'inscrire</a> <!-- lien inscription, &nbsp; sert à rajouter un espace-->
+            </div>
+        </div>
+
+    </form>
+    <script src = "authentif.js"></script>
+
+    
+</body>
+</html>

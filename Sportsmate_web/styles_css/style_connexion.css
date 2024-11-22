@@ -1,0 +1,28 @@
+
+.svg-image {
+    position: static; /* Position absolue pour placer l'image par-dessus la boîte */
+    width: 35px; /* Largeur de l'image */
+    height: auto; /* Hauteur automatique pour maintenir les proportions de l'image */
+    margin-top: -3px;
+}
+h2{
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: 2px;
+    font-size: 20px;
+    
+}
+.box{
+    margin-top: 0;
+    background-color: black;
+    width: 100%; /*occupe toute la largeur de l'écran*/
+    height: 50px;
+    
+}
+.contain {
+    display: flex;
+    justify-content: center; /* Centrage horizontal */
+}
+
+    
+    

@@ -1,0 +1,135 @@
+input[type="recherche"] {
+    width: 500px; /* Largeur du champ de texte */
+    padding: 10px; /* Espacement interne */
+    font-size: 16px; /* Taille de la police */
+    border: 2px solid black; /* Bordure */
+    border-radius: 30px; /* Coins arrondis */
+    outline: none; /* Supprimer la bordure de focus */
+    background-color: #f6f6f6;
+    margin-top: 3px;
+    background-image: url('/Applications/XAMPP/xamppfiles/htdocs/Proj104/sportsmate/Sportsmate_web/Ressources/magnifying-glass-solid.svg');
+    background-repeat: no-repeat;
+    background-position: 10px center; 
+    background-size: 20px;
+    text-indent: 25px;
+}
+.overlay{
+    position: absolute;
+}
+
+.panneau_gauche{
+    background-color: black;
+    width: 12%; /*occupe toute la largeur de l'écran*/
+    height: 100vh;
+    
+}
+.en_ligen_horizontale {/*met en ligne des objets*/
+    display: flex; 
+    justify-content: space-between;
+  }
+
+h5{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.custom_link_white {
+    color: white; /* Couleur du texte du lien */
+    text-decoration: none; /* Supprime les soulignements */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bolder;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.custom_link_pink {/* custom link pour pour la page sur laquelle on se trouve*/
+    color: rgb(220, 76, 136); /* Couleur du texte du lien */
+    text-decoration: none; /* Supprime les soulignements */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bolder;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Changement de couleur au survol */
+.custom_link_white:hover {
+    color: rgb(220, 76, 136); /* Nouvelle couleur du texte du lien au survol */
+}
+
+.resultat_recherche{
+    /*margin-right: auto; */
+    margin-inline-end: auto;
+    margin-left: 25%;
+}
+
+#userDataContainer {
+    margin-top: 20px;
+    display: flex; /* Utiliser un conteneur flex */
+    overflow-x: auto; /* Permet le défilement horizontal */
+    white-space: nowrap;  /* Répartir les éléments horizontalement avec un espacement égal */
+    border-radius: 10px;
+    margin-right: 10px;
+    scrollbar-width: none;/*cache la barre de défilement horizontale*/
+    
+}
+
+
+#scrollableContainer {
+    width: 87%; /* Largeur du conteneur */
+    overflow-x: hidden; /* Cache les profils qui dépassent */
+    white-space: nowrap; /* Empêche le saut de ligne des éléments enfants */
+    position: relative;  /* Empêche le saut de ligne des éléments enfants */
+    
+}
+
+.scrolling-wrapper-flexbox {
+    display: flex;
+}
+
+.user {
+    display: inline-block; /* Affiche les profils sur une ligne horizontale */
+    margin-right: 20px;
+    border-radius: 10px;
+    background-color: rgb(164, 225, 225);
+    
+}
+.sports{
+    display: flex;
+    justify-content: center;
+    
+}
+.identite{
+    display: flex;
+    justify-content: center;
+}
+.pdp{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    
+}
+
+h7{
+    white-space: nowrap;    
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 20px;
+}
+
+.custom_link_without_hover {
+    color: black; /* Couleur du texte du lien */
+    text-decoration: none; /* Supprime les soulignements */
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.rectangle_pink{
+    background-color: pink;
+    width: 100px;
+    height: 200px;
+    margin-top: 300px;
+}

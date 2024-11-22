@@ -1,0 +1,39 @@
+.panneau_droit_scrollable{
+    background-color: white;
+    width: 400px;
+    height: 760px;
+    overflow-y: auto;
+    margin-top: -10px;
+}
+
+.alignement_verti{
+    display: flex;
+}
+.alignement_hori{
+    display: block;
+}
+
+textarea[id="message"] {
+    width: 990px; /* Largeur du champ de texte */
+    height: 50px;
+    padding: 10px; /* Espacement interne */
+    font-size: 16px; /* Taille de la police */
+    border: 2px solid white; /* Bordure */
+    border-radius: 10px; /* Coins arrondis */
+    outline: none; /* Supprimer la bordure de focus */
+    background-color: white;
+    margin-top: 3px;
+    background-position: 10px center; 
+    background-size: 20px;
+    resize: none; /* Empêche le redimensionnement par l'utlisateur*/
+    margin-left: 10px;
+    margin-top: 650px;
+}
+
+
+.overlay2{ /*overlay de l'input de recherche sur le panneau_top*/
+    position: absolute;
+    left: 760px;
+    margin-top: 665px;
+   
+}

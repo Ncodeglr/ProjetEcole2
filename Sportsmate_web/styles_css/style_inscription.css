@@ -1,0 +1,124 @@
+h3{
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+@media screen and (max-width: 500px){
+    h3{
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        font-size: small;
+    } 
+}
+.placement_button_choisir_fichier{
+    /*margin-bottom: 300px;*/
+    margin-bottom: 10px;
+    padding: 10px; /* Espace à l'intérieur du bouton */
+    font-size: 18px;
+    margin-top: 15%;
+}
+
+
+.button_placement{
+    margin-top: -30%;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+
+
+
+.custom_button2 {
+    background-color: black; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    padding: 10px 20px; /* Espacement intérieur */
+    border: none; /* Supprime la bordure */
+    border-radius: 10px; /* Coins arrondis */
+    font-size: 16px; /* Taille de la police */
+    cursor: pointer; /* Curseur de souris en forme de main */
+    text-decoration: none; /* Supprime les soulignements */
+    font-family: Arial, sans-serif; /* Police de caractères */
+    margin-top: 30px;
+    
+    
+    
+}
+/* Changement de couleur au survol */
+.custom_button2:hover {
+    color: rgb(220, 76, 136); /* Nouvelle couleur du texte du lien au survol */
+}
+
+/*composants appelés par id par le js custom_upload_fil.js*/
+
+  
+#custom-file-upload {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 130px; 
+    text-align: center; 
+    overflow: hidden; 
+    white-space: nowrap; 
+    
+}
+
+#file-name{
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 25px;
+    
+}
+.autocomplete_container{
+    position: relative;
+    width: 35%;
+    left: 32.5%;
+}
+@media screen and (max-width: 500px){
+    .autocomplete_container{
+        position: relative;
+        width: 80%;
+        left: 10%;
+    }
+}
+.autocomplete_items{
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 35%;
+    border-radius: 10px; 
+    border: 1px solid black;
+    z-index: 99;
+    top: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 10px;
+}
+.autocomplete_items div{
+    padding: 10px;
+    cursor: pointer;
+    background-color: white;
+    border-bottom: 1px solid black;
+}
+.autocomplete_items div:hover{
+    background-color: lightgray;
+}
+#sport_input1{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+#sport_input2{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+#sport_input3{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}

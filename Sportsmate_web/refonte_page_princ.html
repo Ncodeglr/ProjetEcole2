@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+    <link rel="icon" type="image/svg" href="Ressources/Sportsmate_v1.svg">
+
+    <link rel="stylesheet" href="style_refonte.css">
+    <link rel="stylesheet" href="styles_css/style_popup.css">
+    <link rel="stylesheet" href="styles_css/style_profil.css"> <!--style utilisé ici pour récupérer les styles des posts de la même façon que dans profil-->
+    
+
+</head>
+
+
+
+
+
+<body>
+    <script src="utilisateur_en_lign.php"></script> <!--ici on récupère l'id de l'utilisateur connecté et on crée une balise js pour que le script qui suit puisse la récupérer-->
+    
+    <!--panneau top-->
+    <div class="panneau_top">
+        <a href="refonte_page_princ.html" class="custom_link"><img src="Ressources/Sportsmate_v1.svg" alt="Logo" class = "image_svg"></a>
+
+        <div class = "overlay">
+            <input type="recherche" id="recherche" name="recherche" placeholder= "Rechercher" >
+        </div>
+        
+        <div class="display_nom_icone_dessous">
+            <a href="refonte_page_princ.html"><img src="Ressources/home_black.svg" alt="Logo" class = "icone_home"></a>
+            <a href="refonte_page_princ.html"><div class="h1bis">Accueil</div></a>
+        </div>
+
+        <div class="display_nom_icone_dessous">
+            <a href="profil.html"><img src="Ressources/Profil.svg" alt="Logo" class = "icone_profil"></a>
+            <a href="profil.html"><h2>Profil</h2></a>
+        </div>
+
+        <div class="display_nom_icone_dessous">
+            <a href="message.html"><img src="Ressources/message.svg" alt="Logo" class = "icone_message"></a>
+            <a href="message.html"><h3>Messages</h3></a>
+        </div>
+
+        <div class="display_nom_icone_dessous">
+            <div id="icon" onclick="openPopup()">
+                <img src="Ressources/plus_icon.svg" alt="Logo" class = "icone_add">
+                <h4>Post</h4>
+            </div>
+        </div>
+
+        
+        
+    </div>
+
+    <!-- Pop-up Post-->
+    <form id = "PostUtilisateur" action="post_utilisateur_sql.php" method="post" enctype="multipart/form-data">
+        <div id="popup" class="popup-content">
+
+            <span class="close" onclick="closePopup()">&times;</span>
+    
+            <p>Titre du Post</p>
+    
+            <input type="text" id="PostTitle" name="PostTitle" placeholder="Titre du Post">
+    
+            <p>Description</p>
+    
+            <textarea id="Description" name="Description" placeholder="Description"></textarea>
+    
+            <p>Ajouter une illustration</p>
+            <input type="file" id="file-input" name="photo" accept="image/*">
+            <div id="custom-file-upload">Choisir une photo</div>
+            <div id="file-name"></div>
+            <input type="hidden" id="file-name-hidden" name="file_name">
+    
+            <div id="AjoutPost" onclick="AjoutPost()">
+                <div id="AjoutPost" onclick="BoutonDisparait()">
+                    <button type="button" id="boutonAjoutDate" class="bouton_ajout_post"><img src="Ressources/plus_icon_white.svg" alt="Logo" class = "icone_add_pop_up">Date, Lieu</button>
+                </div>
+            </div>
+    
+            <div id="ajoutDateLieu" class="ajoutPost">
+                <p>Date et heure de l'événement</p>
+                <input type="datetime-local" id="datePicker" name="datePicker">
+        
+                <p>Lieu</p>
+                <div class="align_vertical">
+                    <input type="text" id="Lieu" name="Lieu" placeholder="Lieu">
+                    
+                    <button type = "submit" id = "post" class="bouton_post">Poster</button>
+                    
+                </div>
+                
+            </div>
+            <button type = "submit" id = "post" class="bouton_post">Poster</button>
+           
+        </div>
+    </form>
+    
+    <!--espace pour les posts des autres utlisateurs-->
+    <div class="center_post_in_home">
+        <div id="postDiv"></div>
+    </div>
+  
+    <!--panneau Bottom pour mobile-->
+    <div class="panneau_bottom">
+      
+        <a href="refonte_page_princ.html"><img src="Ressources/home_black.svg" alt="Logo" class = "icone_home_mobile"></a>
+        <a href="profil.html"><img src="Ressources/Profil.svg" alt="Logo" class = "icone_profil_mobile"></a>
+        <a href="message.html"><img src="Ressources/message.svg" alt="Logo" class = "icone_message_mobile"></a>
+        <div id="icon" onclick="openPopup()">
+            <img src="Ressources/plus_icon.svg" alt="Logo" class = "icone_add_mobile">
+        </div>
+    </div>
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+    <script src="pop_up.js"></script>
+    <script src="sql_display_post_home.js"></script> <!--modif avec le js pour mariadb-->
+    <script src = "custom_upload_file.js"></script>
+    <script src = "declenche_recherche.js"></script> <!--lien avec le js qui declenche la recherche-->
+
+</body>
+
+</html>
